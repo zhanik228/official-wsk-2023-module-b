@@ -35,7 +35,7 @@
 <main>
     @if($workspace->quota)
         <h2 class="my-4">
-            This month max limit: {{ $workspace->quota->limit }}
+            This month max limit: {{ $workspace->quota->limit }} $
         </h2>
     @endif
     @if($workspace->quota)
@@ -75,9 +75,9 @@
                 <tr>
                     <td class="p-2">{{ $currentBill->token->name }}</td>
                     <td class="p-2">{{ $currentBill->usage_service_per_sec }} s</td>
-                    <td class="p-2">{{ $currentBill->service->service_cost_per_sec }}</td>
+                    <td class="p-2">{{ $currentBill->service->service_cost_per_sec }} $</td>
                     <td class="p-2">
-                        {{ $currentBill->total }}
+                        {{ $currentBill->total }} $
                     </td>
                 </tr>
         @endforeach
@@ -85,7 +85,7 @@
     </table>
         <div class="d-flex justify-content-between align-items-end mt-5">
             <p class=" fs-2">Total</p>
-            <p class="fs-3">{{ $totality }}</p>
+            <p class="fs-3">{{ $totality }} $</p>
         </div>
 </main>
 </body>
